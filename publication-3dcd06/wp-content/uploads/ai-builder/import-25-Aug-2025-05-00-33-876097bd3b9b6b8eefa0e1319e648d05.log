@@ -1,0 +1,26 @@
+
+Started Import Process
+# System Details: 
+Debug Mode 		: Disabled
+Operating System 	: Linux
+Software 		: TasteWP-S3 Official/3.0.0 (nginx fork)
+MySQL version 		: 8.0.32
+XML Reader 		: Yes
+PHP Version 		: 8.0.30
+PHP Max Input Vars 	: 5000
+PHP Max Post Size 	: 128M
+PHP Extension GD 	: Yes
+PHP Max Execution Time 	: 100
+Max Upload Size 	: 60 MB
+Memory Limit 		: 128M
+Timezone 		: 0
+
+-----
+
+Importing Started! - 05:02:53 UTC
+---
+
+WHY IMPORT PROCESS CAN FAIL? READ THIS - 
+https://wpastra.com/docs/?p=1314&utm_source=demo-import-panel&utm_campaign=import-error&utm_medium=wp-dashboard
+
+---
