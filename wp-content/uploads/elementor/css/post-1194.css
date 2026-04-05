@@ -171,7 +171,7 @@ body {
 
 /* Visit Project text (does not block clicks) */
 .elementor-1194 .elementor-element.elementor-element-7078a241::before {
-    content: 'Visit Store \2191';
+    content: 'Visit Site \2191';
     position: absolute;
     bottom: 20px;
     left: 50%;
