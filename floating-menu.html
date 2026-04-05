@@ -114,10 +114,10 @@
 	<div class="fm-wrapper">
 		<div class="fm-items">
 			<div class="fm-items-inner">
-				<a href="/">Home</a>
-				<a href="#about%20me">About</a>
-				<a href="/projects/">Projects</a>
-				<a href="#colophon">Contact</a>
+				<a href="/" class="fm-link" data-page="/">Home</a>
+				<a href="/#about%20me" class="fm-link" data-page="/#about">About</a>
+				<a href="/projects/" class="fm-link" data-page="/projects/">Projects</a>
+				<a href="/#colophon" class="fm-link" data-page="/#contact">Contact</a>
 			</div>
 		</div>
 		<div class="fm-trigger">
@@ -127,3 +127,27 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	document.querySelectorAll('.fm-link').forEach(link => {
+		link.addEventListener('click', function(e) {
+			const href = this.getAttribute('href');
+			const isAnchor = href.includes('#');
+			const targetPage = isAnchor ? href.split('#')[0] : href;
+			const currentPage = window.location.pathname;
+
+			if (isAnchor && (currentPage === targetPage || currentPage === targetPage + 'index.html')) {
+				// Already on the right page, just scroll
+				e.preventDefault();
+				const targetId = href.split('#')[1];
+				const target = document.getElementById(targetId) || document.querySelector('[id="' + targetId + '"]');
+				if (target) {
+					target.scrollIntoView({ behavior: 'smooth' });
+				}
+			} else if (isAnchor) {
+				// Navigate to the page with anchor
+				window.location.href = href;
+			}
+		});
+	});
+</script>
