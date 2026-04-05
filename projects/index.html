@@ -110,7 +110,16 @@ flexibility(document.documentElement);
 <a class="skip-link screen-reader-text" href="#content" title="Skip to content">
 		Skip to content</a>
 
-<div class="hfeed site" id="page">
+	<div id="floating-menu-container"></div>
+	<script>
+		fetch('/floating-menu.html')
+			.then(r => r.text())
+			.then(html => {
+				document.getElementById('floating-menu-container').innerHTML = html;
+			});
+	</script>
+
+	<div class="hfeed site" id="page">
 		<div id="content" class="site-content">
 		<div class="ast-container">
 		
